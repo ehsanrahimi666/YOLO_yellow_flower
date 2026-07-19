@@ -1,0 +1,20 @@
+{
+  "n_flowers": 7401,
+  "density_per_m2_imaged": 7.5514,
+  "density_per_m2_bbox": 2.9082,
+  "imaged_area_m2": 980.1,
+  "bbox_area_m2": 2544.9,
+  "gsd_mm": 2.0,
+  "dia_cm_mean": 5.68,
+  "dia_cm_sd": 1.34,
+  "dia_cm_median": 5.64,
+  "conf_mean": 0.625,
+  "pct_conf_gt_0_9": 0.0,
+  "total_floral_area_m2": 25.04,
+  "pct_floral_cover": 2.555,
+  "tiles": 1944,
+  "tiles_skipped": 1163,
+  "raw_detections": 9052,
+  "removed_by_nms": 1651,
+  "minutes": 4.1
+}

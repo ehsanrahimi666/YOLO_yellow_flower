@@ -1,0 +1,89 @@
+======================================================================
+WALL-TO-WALL FLOWER DETECTION
+run: 2026-07-18T13:19:26
+======================================================================
+
+[1] STUDY AREA  (for Materials & Methods)
+    orthomosaic       : RGB.tif
+    size              : 30755 x 20687 px | 3 bands | uint8
+    CRS               : EPSG:32652
+    GSD               : 0.200 cm/px  (2.0 mm/px)
+    bounding box (UTM): E 471590.52..471652.03   N 4044217.86..4044259.23
+    dimensions        : 61.5 m (E-W) x 41.4 m (N-S)  = 0.2545 ha (2545 m2)
+    imaged (valid) area: 38.5% of bbox = 0.0980 ha (980 m2)
+    centre (lon, lat) : 128.682939, 36.543126
+    extent  lon       : 128.682597 .. 128.683282
+    extent  lat       : 36.542938 .. 36.543313
+    declared nodata   : 255.0   | data range probe (99.9 pct): 237
+    tile footprint    : 640 px = 1.28 m
+
+[2] MODEL
+    weights   : C:\Users\USER\Downloads\best.pt
+    trained as: yolov9t.pt | epoch -1 | imgsz 640
+    parameters: 2.01 M | device cpu
+    classes   : {0: 'yellow_flower'}
+    sanity    : 31 detections on 5 training tiles (OK)
+
+[3] PREDICTION
+    tiles: 1944 (stride 576 px, 64 px overlap)
+      100/1944 tiles | 51 detections | 0.1 min elapsed | ETA 1.3 min
+      200/1944 tiles | 249 detections | 0.2 min elapsed | ETA 1.7 min
+      300/1944 tiles | 539 detections | 0.4 min elapsed | ETA 2.3 min
+      400/1944 tiles | 942 detections | 0.7 min elapsed | ETA 2.8 min
+      500/1944 tiles | 1326 detections | 1.0 min elapsed | ETA 3.0 min
+      600/1944 tiles | 1710 detections | 1.3 min elapsed | ETA 3.0 min
+      700/1944 tiles | 2370 detections | 1.5 min elapsed | ETA 2.7 min
+      800/1944 tiles | 3168 detections | 1.8 min elapsed | ETA 2.5 min
+      900/1944 tiles | 4108 detections | 2.0 min elapsed | ETA 2.3 min
+      1000/1944 tiles | 5019 detections | 2.2 min elapsed | ETA 2.1 min
+      1100/1944 tiles | 5584 detections | 2.5 min elapsed | ETA 1.9 min
+      1200/1944 tiles | 6180 detections | 2.7 min elapsed | ETA 1.7 min
+      1300/1944 tiles | 6816 detections | 3.0 min elapsed | ETA 1.5 min
+      1400/1944 tiles | 7062 detections | 3.2 min elapsed | ETA 1.2 min
+      1500/1944 tiles | 7316 detections | 3.4 min elapsed | ETA 1.0 min
+      1600/1944 tiles | 7629 detections | 3.6 min elapsed | ETA 0.8 min
+      1700/1944 tiles | 8239 detections | 3.8 min elapsed | ETA 0.5 min
+      1800/1944 tiles | 8789 detections | 3.9 min elapsed | ETA 0.3 min
+      1900/1944 tiles | 9042 detections | 4.0 min elapsed | ETA 0.1 min
+      1944/1944 tiles | 9052 detections | 4.0 min elapsed | ETA 0.0 min
+    skipped as nodata : 1163
+    raw detections    : 9052  in 4.0 min
+
+[4] MERGING
+    global NMS (IoU 0.5): 9052 -> 7401 flowers (1651 duplicates from tile seams removed)
+    box geometry: width 5.78 cm | height 5.59 cm | aspect 0.97
+    >> flowers_all_boxes.shp  (7401 boxes, single merged file)
+    >> flowers_all_points.shp | flowers_all.gpkg | flowers_all.csv
+
+[5] RESULTS STATISTICS
+    flowers detected  : 7401
+    density (imaged)  : 7.551 flowers/m2   over 980 m2
+    density (bbox)    : 2.908 flowers/m2   over 2545 m2
+    diameter (cm)     : mean 5.68 | median 5.64 | sd 1.34 | range 2.38-11.76
+    confidence        : mean 0.625 | median 0.673 | >0.5: 79.0% | >0.9: 0.0%
+    total floral area : 25.040 m2 = 2.555% of imaged area
+    density grid (1.0 m cells): max 51.0 | mean of occupied cells 8.48 flowers/m2
+
+    figures: fig_density_map.png | fig_detection_stats.png
+
+======================================================================
+PASTE THIS BACK FOR THE PAPER
+======================================================================
+  n_flowers               : 7401
+  density_per_m2_imaged   : 7.5514
+  density_per_m2_bbox     : 2.9082
+  imaged_area_m2          : 980.1
+  bbox_area_m2            : 2544.9
+  gsd_mm                  : 2.0
+  dia_cm_mean             : 5.68
+  dia_cm_sd               : 1.34
+  dia_cm_median           : 5.64
+  conf_mean               : 0.625
+  pct_conf_gt_0_9         : 0.0
+  total_floral_area_m2    : 25.04
+  pct_floral_cover        : 2.555
+  tiles                   : 1944
+  tiles_skipped           : 1163
+  raw_detections          : 9052
+  removed_by_nms          : 1651
+  minutes                 : 4.1

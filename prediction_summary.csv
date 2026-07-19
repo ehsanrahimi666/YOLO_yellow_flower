@@ -1,0 +1,2 @@
+n_flowers,density_per_m2_imaged,density_per_m2_bbox,imaged_area_m2,bbox_area_m2,gsd_mm,dia_cm_mean,dia_cm_sd,dia_cm_median,conf_mean,pct_conf_gt_0_9,total_floral_area_m2,pct_floral_cover,tiles,tiles_skipped,raw_detections,removed_by_nms,minutes
+7401,7.5514,2.9082,980.1,2544.9,2.0,5.68,1.34,5.64,0.625,0.0,25.04,2.555,1944,1163,9052,1651,4.1
