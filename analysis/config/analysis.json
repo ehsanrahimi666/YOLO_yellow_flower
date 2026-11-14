@@ -1,0 +1,61 @@
+{
+  "description": "Settings of the statistical comparison of detectors, the counting-accuracy check and the CPU latency benchmark for the YOLO yellow-flower benchmark.",
+  "inputs": {
+    "per_fold_metrics": "data_input/benchmark_per_fold.csv",
+    "tiles": "data_input/tiles_summary.csv",
+    "detections_wall_to_wall": "data_input/flowers_all.csv"
+  },
+  "detectors": [
+    "yolov8n",
+    "yolov9t",
+    "yolov10n",
+    "yolo11n",
+    "yolo11s"
+  ],
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "primary_metric": "mAP50",
+  "secondary_metrics": [
+    "mAP50_95",
+    "precision",
+    "recall"
+  ],
+  "model": "metric ~ detector (fixed) + (1 | fold) (random intercept), REML; detector effect tested with the randomized-complete-block F test (df 4, 16), which equals the Kenward-Roger F test of the mixed model for this balanced design; likelihood-ratio test on ML fits as a check",
+  "variance_partition": "two-way additive ANOVA sums of squares (detector, fold, residual) and method-of-moments variance components (equal to REML for a balanced design, truncated at zero)",
+  "pairwise": "all 10 detector pairs; differences paired by fold; SE from the residual mean square (df 16); Tukey-adjusted 95% CIs for difference tests",
+  "equivalence": {
+    "method": "two one-sided tests (TOST) using the pooled residual SE (df 16); equivalence declared when the 90% CI lies within (-delta, +delta); joint equivalence of a set of detectors by the intersection-union principle (every pair equivalent)",
+    "delta_primary": 0.02,
+    "delta_sensitivity": [
+      0.01,
+      0.05
+    ],
+    "alpha": 0.05
+  },
+  "sensitivity": {
+    "paired_t_per_pair": "ordinary paired t (df 4) per pair",
+    "cv_dependence_correction": "Nadeau-Bengio corrected paired t: variance of the mean difference = (1/k + n_val/n_train) * s_d^2, with n_val/n_train the mean ratio of validation to training tiles over folds (df 4)",
+    "leave_one_fold_out": "refit after dropping each fold in turn; report detector p-value, fold and detector variance shares, TOST outcomes"
+  },
+  "count_accuracy": {
+    "models": "saved YOLOv9t fold models (BENCH_ALL.zip fold*/weights/best.pt), each applied to its own held-out fold",
+    "inference": "imgsz 640, CPU, per-tile NMS IoU 0.7 (framework default) followed by NMS IoU 0.5 as in the wall-to-wall mapping",
+    "confidence_thresholds": [
+      0.25,
+      "F1-optimal from the fold's own validation (reported only, not used to tune the map)"
+    ],
+    "matching": "greedy one-to-one matching by descending confidence at IoU >= 0.5",
+    "outputs": "TP, FP, FN, precision, recall, F1, predicted/reference count ratio per fold and pooled"
+  },
+  "latency": {
+    "models": "architectures built from the framework configuration files with one class (weights do not affect forward-pass cost)",
+    "protocol": "CPU, batch 1, 640 x 640 input, fused model, float32, 2 threads, 30 warm-up passes, 200 timed passes, median and IQR of forward-pass time",
+    "flops": "GFLOPs reported by the framework for a 640 x 640 input"
+  },
+  "seed": 0
+}

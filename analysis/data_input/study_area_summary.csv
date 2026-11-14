@@ -1,0 +1,2 @@
+ortho,width_px,height_px,bands,dtype,crs,gsd_cm,gsd_mm,utm_left,utm_right,utm_bottom,utm_top,width_m,height_m,bbox_ha,bbox_m2,valid_pct,valid_ha,valid_m2,centre_lon,centre_lat,lon_min,lon_max,lat_min,lat_max,tile_px,tile_m
+RGB.tif,30755,20687,3,uint8,EPSG:32652,0.2,2.0,471590.52,471652.03,4044217.86,4044259.23,61.51,41.37,0.2545,2544.9,38.51,0.098,980.1,128.682939,36.543126,128.682597,128.683282,36.542938,36.543313,640,1.28

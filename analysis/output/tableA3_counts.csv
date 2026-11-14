@@ -1,0 +1,13 @@
+Region,Fold,Reference,Detected,Matched,Unmatched detections,Missed,Precision,Recall,Count ratio,F1-optimal threshold,Count ratio at optimum
+Whole tile,0,142,164,140,24,2,0.85,0.99,1.15,0.49,1.04
+Whole tile,1,420,458,391,67,29,0.85,0.93,1.09,0.25,1.09
+Whole tile,2,389,423,367,56,22,0.87,0.94,1.09,0.28,1.07
+Whole tile,3,138,160,133,27,5,0.83,0.96,1.16,0.42,0.99
+Whole tile,4,105,128,104,24,1,0.81,0.99,1.22,0.51,1.10
+Whole tile,All,1194,1333,1135,198,59,0.85,0.95,1.12,0.37,1.04
+Tile interior,0,113,124,111,13,2,0.90,0.98,1.10,0.40,1.04
+Tile interior,1,339,351,314,37,25,0.89,0.93,1.04,0.23,1.05
+Tile interior,2,318,326,298,28,20,0.91,0.94,1.03,0.25,1.03
+Tile interior,3,109,119,105,14,4,0.88,0.96,1.09,0.37,0.99
+Tile interior,4,88,105,87,18,1,0.83,0.99,1.19,0.46,1.09
+Tile interior,All,967,1025,915,110,52,0.89,0.95,1.06,0.30,1.03

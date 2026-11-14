@@ -1,0 +1,2 @@
+n_annotations,n_used,n_tiles,n_boxes,n_background,dropped_on_nodata,tiles_skipped_nodata,gsd_cm_px,tile_m,dia_px_mean,dia_cm_mean,data_range_probe,model,epochs,patience,imgsz,batch,device,folds
+1235,1235,122,1194,0,0,14,0.2,1.28,30.62,6.12,256.0,yolo11n.pt,150,15,640,4,cpu,5

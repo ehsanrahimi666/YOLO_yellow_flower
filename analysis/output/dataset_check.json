@@ -1,0 +1,89 @@
+{
+ "subset_px": [
+  11286,
+  9361
+ ],
+ "subset_m": [
+  22.571845898113676,
+  18.721872182548477
+ ],
+ "pixel_size_m": 0.001999986345748155,
+ "n_polygons": 1235,
+ "candidate_tiles": 137,
+ "kept_tiles_rederived": 122,
+ "skipped_tiles_rederived": 14,
+ "tiles_empty_after_half_box_rule": 1,
+ "kept_set_equals_saved": true,
+ "max_valid_diff": 0.0011572265625000577,
+ "rules": {
+  "centre": {
+   "boxes_rederived": 1197,
+   "boxes_saved": 1194,
+   "matched_iou90": 1194,
+   "tiles_identical": 119
+  },
+  "half_box": {
+   "boxes_rederived": 1194,
+   "boxes_saved": 1194,
+   "matched_iou90": 1194,
+   "tiles_identical": 122
+  }
+ },
+ "polygons_lost_half_box": 41,
+ "lost_in_skipped_tiles": 38,
+ "polygon_dia_cm_bbox_mean": 6.124304603966262,
+ "polygon_dia_cm_bbox_median": 6.07818039134144,
+ "polygon_dia_px_mean": 30.621732078252176,
+ "polygon_dia_px_min": 12.567819216555563,
+ "polygon_dia_px_max": 58.83762711974032,
+ "polygon_eqcircle_dia_cm_mean": 5.247375917098017,
+ "val_tiles_bordering_other_fold": 62,
+ "n_tiles": 122,
+ "strips": [
+  {
+   "fold": 0,
+   "x_min": 0,
+   "x_max": 1920,
+   "tiles": 17,
+   "flowers": 142,
+   "columns": 4,
+   "width_m": 5.1199650451152765
+  },
+  {
+   "fold": 1,
+   "x_min": 2560,
+   "x_max": 4480,
+   "tiles": 46,
+   "flowers": 420,
+   "columns": 4,
+   "width_m": 5.1199650451152765
+  },
+  {
+   "fold": 2,
+   "x_min": 5120,
+   "x_max": 6400,
+   "tiles": 31,
+   "flowers": 389,
+   "columns": 3,
+   "width_m": 3.8399737838364576
+  },
+  {
+   "fold": 3,
+   "x_min": 7040,
+   "x_max": 8320,
+   "tiles": 18,
+   "flowers": 138,
+   "columns": 3,
+   "width_m": 3.8399737838364576
+  },
+  {
+   "fold": 4,
+   "x_min": 8960,
+   "x_max": 10240,
+   "tiles": 10,
+   "flowers": 105,
+   "columns": 3,
+   "width_m": 3.8399737838364576
+  }
+ ]
+}

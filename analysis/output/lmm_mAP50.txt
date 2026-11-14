@@ -1,0 +1,22 @@
+             Mixed Linear Model Regression Results
+================================================================
+Model:                 MixedLM    Dependent Variable:    mAP50  
+No. Observations:      25         Method:                REML   
+No. Groups:            5          Scale:                 0.0001 
+Min. group size:       5          Log-Likelihood:        74.2893
+Max. group size:       5          Converged:             Yes    
+Mean group size:       5.0                                      
+----------------------------------------------------------------
+                     Coef.  Std.Err.    z    P>|z| [0.025 0.975]
+----------------------------------------------------------------
+Intercept             0.960    0.008 120.579 0.000  0.944  0.976
+C(model)[T.yolo11s]  -0.008    0.007  -1.085 0.278 -0.021  0.006
+C(model)[T.yolov10n] -0.024    0.007  -3.350 0.001 -0.037 -0.010
+C(model)[T.yolov8n]  -0.003    0.007  -0.408 0.683 -0.017  0.011
+C(model)[T.yolov9t]   0.002    0.007   0.346 0.730 -0.011  0.016
+Group Var             0.000    0.015                            
+================================================================
+
+REML fold variance: 0.000192368
+REML residual variance: 0.000124511
+LRT detector (ML fits): chi2 = 14.6468, df = 4, p = 0.005493

@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use these data or code, please cite them as below."
+title: "Data and code for: Automated Yellow-Flower Detection in Grasslands Using UAV Imagery and YOLO models"
+type: dataset
+authors:
+  - family-names: Rahimi
+    given-names: Ehsan
+    orcid: "https://orcid.org/0000-0002-8401-472X"
+  - family-names: Jung
+    given-names: Chuleui
+    orcid: "https://orcid.org/0000-0001-8134-9279"
+repository-code: "https://github.com/ehsanrahimi666/yolo_yellow_flower"
+keywords:
+  - Coreopsis lanceolata
+  - floral resources
+  - object detection
+  - spatial cross-validation
+  - unmanned aerial vehicle
+  - YOLO

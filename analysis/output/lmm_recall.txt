@@ -1,0 +1,22 @@
+             Mixed Linear Model Regression Results
+===============================================================
+Model:                MixedLM    Dependent Variable:    recall 
+No. Observations:     25         Method:                REML   
+No. Groups:           5          Scale:                 0.0005 
+Min. group size:      5          Log-Likelihood:        60.7377
+Max. group size:      5          Converged:             Yes    
+Mean group size:      5.0                                      
+---------------------------------------------------------------
+                     Coef.  Std.Err.   z    P>|z| [0.025 0.975]
+---------------------------------------------------------------
+Intercept             0.936    0.011 83.459 0.000  0.914  0.958
+C(model)[T.yolo11s]  -0.012    0.014 -0.862 0.389 -0.038  0.015
+C(model)[T.yolov10n] -0.041    0.014 -2.995 0.003 -0.067 -0.014
+C(model)[T.yolov8n]  -0.010    0.014 -0.712 0.477 -0.036  0.017
+C(model)[T.yolov9t]   0.004    0.014  0.291 0.771 -0.023  0.031
+Group Var             0.000    0.010                           
+===============================================================
+
+REML fold variance: 0.000166176
+REML residual variance: 0.000462204
+LRT detector (ML fits): chi2 = 12.0917, df = 4, p = 0.01668

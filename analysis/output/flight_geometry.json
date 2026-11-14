@@ -1,0 +1,22 @@
+{
+ "n_images": 774,
+ "date": "2026-06-13",
+ "start": "14:59:38",
+ "end": "15:25:27",
+ "duration_min": 25.816666666666666,
+ "capture_interval_s_median": 2.0,
+ "rel_alt_min": 8.242,
+ "rel_alt_median": 8.362,
+ "rel_alt_max": 8.505,
+ "pitch_min": -90.0,
+ "pitch_max": -89.9,
+ "n_lines": 10,
+ "line_length_m_median": 178.6156160713872,
+ "line_orientation_deg": 113.14175532478465,
+ "along_track_spacing_m_median": 2.153751184946593,
+ "line_spacing_m_median": 2.843432986177504,
+ "footprint_along_m": 8.324264336902278,
+ "footprint_across_m": 11.110241582114265,
+ "forward_overlap": 0.7412682853668158,
+ "side_overlap": 0.7440710028524509
+}
